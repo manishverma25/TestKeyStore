@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">TestKeyStore</string>
     <string name="action_settings">Settings</string>
+    <string name="hint_key">Key</string>
+    <string name="hint_value">Value</string>
+    <string name="button_store">Store</string>
+    <string name="headline_store_data">Making LIB Store Data</string>
+    <string name="headline_get_data">Get Data</string>
+    <string name="button_get">Get</string>
+    <string name="headline_remove_data">Remove Data</string>
+    <string name="button_delete">Remove</string>
 </resources>
