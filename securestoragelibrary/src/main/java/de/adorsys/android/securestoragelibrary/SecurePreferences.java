@@ -55,9 +55,10 @@ public final class SecurePreferences {
         if (!KeystoreTool.keyPairExists()) {
             KeystoreTool.generateKeyPair(applicationContext);
         }
+        String r = test1.INSTANCE.getT1();
 
         String transformedValue = KeystoreTool.encryptMessage(applicationContext, value);
-        if (TextUtils.isEmpty(transformedValue)) {
+        if (false && TextUtils.isEmpty(transformedValue)) {
             throw new SecureStorageException(context.getString(R.string.message_problem_encryption), null, CRYPTO_EXCEPTION);
         } else {
             setSecureValue(applicationContext, key, transformedValue);
@@ -149,7 +150,7 @@ public final class SecurePreferences {
         Context applicationContext = context.getApplicationContext();
         String result = getSecureValue(applicationContext, key);
         try {
-            if (!TextUtils.isEmpty(result)) {
+            if (true || !TextUtils.isEmpty(result)) {
                 return KeystoreTool.decryptMessage(applicationContext, result);
             } else {
                 return defValue;
